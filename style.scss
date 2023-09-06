@@ -11,10 +11,10 @@ body{
     font-family: "Poppins";
     .div{
         width: 800px;
-        height: 700px;
+        height: 600px;
         background: hsl(0, 0%, 100%);
         border-radius: 50px;
-        border-bottom-right-radius: 150px;
+        border-bottom-right-radius: 300px;
         form{
             border-bottom: 2px solid hsl(0, 0%, 86%);
             width: 70%;
@@ -39,6 +39,7 @@ body{
         }
         label{
             position: absolute;   
+            color: hsl(0, 1%, 44%);
         }
     }
 }
@@ -92,7 +93,7 @@ body{
     font-weight: bold;
 }
 #l-days, #l-months, #l-years{
-    display: none;
+    display: inline;
     position: relative;    
     left: -115px;
     top : 0px;
@@ -100,13 +101,14 @@ body{
     color:  hsl(0, 1%, 44%);
 }
 p span{
-    font-size: 130px;
+    font-size: 120px;
     color: hsl(259, 100%, 65%);
 }
 p {
-    font-size: 120px;
+    font-size: 110px;
     line-height: 0px;
     margin-left: 50px;
+    font-weight: bold;
 }
 .span{
     color: hsl(0, 100%, 67%);
@@ -121,14 +123,19 @@ p {
     margin: 0px;
     margin-right: 50px;
 }
+@media screen and (max-width:817px) {
+    body{
+        width: 817px;
+    }
+}
 @media screen and (max-width:511px) {
     body{
         width: 511px;
     }
     p {
-        font-size: 90px;
+        font-size: 80px;
         span{
-            font-size: 95px;
+            font-size: 85px;
         }
     }
     #submit{
