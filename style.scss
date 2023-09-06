@@ -11,7 +11,7 @@ body{
     font-family: "Poppins";
     .div{
         width: 800px;
-        height: 600px;
+        height: 700px;
         background: hsl(0, 0%, 100%);
         border-radius: 50px;
         border-bottom-right-radius: 300px;
@@ -101,11 +101,11 @@ body{
     color:  hsl(0, 1%, 44%);
 }
 p span{
-    font-size: 120px;
+    font-size: 130px;
     color: hsl(259, 100%, 65%);
 }
 p {
-    font-size: 110px;
+    font-size: 120px;
     line-height: 0px;
     margin-left: 50px;
     font-weight: bold;
@@ -126,6 +126,15 @@ p {
 @media screen and (max-width:817px) {
     body{
         width: 817px;
+    }
+    div{
+        height: 600px;
+    }
+    p {
+        font-size: 110px;
+        span{
+            font-size: 120px;
+        }
     }
 }
 @media screen and (max-width:511px) {
