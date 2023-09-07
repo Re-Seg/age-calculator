@@ -9,7 +9,6 @@ var button = document.querySelector('#submit');
 var s1 = document.querySelector('.days');
 var s2 = document.querySelector('.months');
 var s3 = document.querySelector('.years');
-var b = years.value%4;
 
 button.addEventListener('click', egine);
 function egine() {
@@ -17,6 +16,7 @@ function egine() {
     var span1 = document.querySelector('#span1');
     var span2 = document.querySelector('#span2');
     var span3 = document.querySelector('#span3');
+    var b = years.value%4;
     if (test.test(days.value)==false || test.test(months.value)==false || test.test(years.value)==false ) {
         if (test.test(days.value)==false){
             span1.innerHTML="This field is required";
@@ -28,14 +28,14 @@ function egine() {
             span3.innerHTML="This field is required";
             span3.style.display = 'inline';
         }
-    }else if (((months.value==1  || months.value==3 || months.value==5 || months.value==7 || months.value==10 || months.value==12) && days.value>31) || ((months.value==4 || months.value==6 || months.value==9 || months.value==11)&& days.value>30 ) || (months.value==2 /*&& b>0 */&& days.value>28)/* || (months.value==2 && b==0 && days.value>29) */|| days.value<=0  || months.value>12  || months.value<=0  ||  y<years.value) {
+    }else if (((months.value==1  || months.value==3 || months.value==5 || months.value==7 || months.value==10 || months.value==12) && days.value>31) || ((months.value==4 || months.value==6 || months.value==9 || months.value==11)&& days.value>30 ) ||  (b>0 && months.value==2 && days.value>28) || (b==0 && months.value==2 &&  days.value>29) || days.value<=0  || months.value>12  || months.value<=0  ||  y<years.value) {
         span1.innerHTML = "Must be a valid day";
         span2.innerHTML = "Must be a valid month";
         span3.innerHTML = "Must be in past";
         span1.style.color = "rgba(255, 255, 255, 0)";
         span2.style.color = "rgba(255, 255, 255, 0)";
         span3.style.color = "rgba(255, 255, 255, 0)";
-        if (((months.value==1  || months.value==3 || months.value==5 || months.value==7 || months.value==10 || months.value==12) && days.value>31) || ((months.value==4 || months.value==6 || months.value==9 || months.value==11)&& days.value>30 ) || (months.value==2 /*&& b>0 */&& days.value>28)/* || (months.value==2 && b==0 && days.value>29) */|| days.value<=0){
+        if (((months.value==1  || months.value==3 || months.value==5 || months.value==7 || months.value==10 || months.value==12) && days.value>31) || ((months.value==4 || months.value==6 || months.value==9 || months.value==11)&& days.value>30 ) || (b>0 && months.value==2 && days.value>28) || (b==0 && months.value==2 &&  days.value>29) || days.value<=0){
             span1.style.display = 'inline';
             span1.style.color = "inherit";
         }if (months.value>12  || months.value<=0){

@@ -7,7 +7,7 @@ var days = document.querySelector('#days');
 var months = document.querySelector('#months');
 var years = document.querySelector('#years');
 var body = document.querySelector('body');
-setInterval(field,1000);
+setInterval(field, 100);
 function field(){
     var test1= /./;
     if(test1.test(days.value)==true){
