@@ -12,22 +12,23 @@
 <body>
     <div class="div">
         <form>
-            <div class="day">
-                <label for="days" id="h-days">DAY</label><br>
-                <input type="tel"  minlength="1" maxlength="2" id="days">
-                <label for="days" id="l-days">DD</label>
+            <div class="container">
+                <div class="day">
+                    <label for="days" id="h-days">DAY</label><br>
+                    <input type="tel"  minlength="1" maxlength="2" id="days"  placeholder="DD">
+                    <span id="span1"></span>
+                </div>
+                <div class="month">
+                    <label for="months" id="h-months">MONTH</label><br>
+                    <input type="tel" minlength="1" maxlength="2" id="months" placeholder="MM">
+                    <span id="span2"></span>
+                </div>
+                <div class="year">
+                    <label for="years" id="h-years">YEAR</label><br>
+                    <input type="tel"  minlength="4" maxlength="4" id="years" placeholder="YYYY">
+                    <span id="span3"></span>
+                </div>
             </div>
-            <div class="month">
-                <label for="months" id="h-months">MONTH</label><br>
-                <input type="tel" minlength="1" maxlength="2" id="months">
-                <label for="months" id="l-months">MM</label>
-            </div>
-            <div class="year">
-                <label for="years" id="h-years">YEAR</label><br>
-                <input type="tel"  minlength="4" maxlength="4" id="years">
-                <label for="years" id="l-years">YYYY</label><br>
-            </div>
-            <div class="span"><span id="span1"></span><span id="span2"></span><span id="span3"></span></div>
         </form>
         <div id="submit"><img src="images/icon-arrow.svg" alt="icon"></div>
         <div>

@@ -21,9 +21,30 @@ body{
             height: 130px;
             margin: 50px 0px 50px 50px;
             padding: 0px;
+            .container{
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+                display: -ms-grid;
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                span{
+                    color: hsl(0, 100%, 67%);
+                    font-size: 12px;
+                    position: relative;
+                    top: -15px;
+                    font-style: italic;
+                    font-weight: bold;
+                    padding: 0px;
+                }
+                #span1, #span2, #span3{
+                    margin: 0px;
+                    margin-right: 60px;
+                }
+            }
         }
         input{
-            width: 15%;
+            width: 60%;
             height: 50px;
             margin: 0px;
             padding-left: 20px;
@@ -33,8 +54,18 @@ body{
             border: 1.5px solid hsl(0, 1%, 44%);
             font-size: 30px;
             font-weight: bold;
+            appearance: none;
+            &:focus{
+                outline: none;
+                border: 2px solid hsl(259, 100%, 65%);
+            }
+            &::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+                margin: 0;
+                appearance: none;
+            }
         }
         label{
+            outline: none;
             position: absolute;   
             color: hsl(0, 1%, 44%);
         }
@@ -58,7 +89,7 @@ body{
         background-color: hsl(0, 0%, 8%);
     }
 }
-.day, .month, .year{
+/*.day, .month, .year{
     display: inline;
     margin: 0px;
 } 
@@ -73,30 +104,15 @@ body{
     top: -110px;
     left: 340px;
     margin: 0px;
-}
-#h-days{
-    position: relative;
+}*/
+
+#h-months, #h-years, #h-days{
     font-size: 15px;
     margin: 0px;
-    top: 5px;
-    left: 5px;
     font-weight: bold;
+    top: 175px;
 }
-#h-months, #h-years{
-    font-size: 15px;
-    left: -180px;
-    top: 25px;
-    margin: 0px;
-    font-weight: bold;
-}
-#l-days, #l-months, #l-years{
-    display: inline;
-    position: relative;    
-    left: -115px;
-    top : 0px;
-    margin: 0px;
-    color:  hsl(0, 1%, 44%);
-}
+
 p span{
     font-size: 130px;
     color: hsl(259, 100%, 65%);
@@ -107,31 +123,23 @@ p {
     margin-left: 50px;
     font-weight: bold;
 }
-.span{
-    color: hsl(0, 100%, 67%);
-    font-size: 12px;
-    position: relative;
-    top: -105px;
-    font-style: italic;
-    font-weight: bold;
-    padding: 0px;
-}
-#span1, #span2, #span3{
-    margin: 0px;
-    margin-right: 50px;
-}
 @media screen and (max-width:817px) {
-    body{
+    /*body{
         width: 817px;
     }
     div{
         height: 600px;
-    }
+    }*/
     p {
         font-size: 110px;
         span{
             font-size: 120px;
         }
+    }
+    #submit{
+        float: left;
+        left: 40%;
+        top: -75px;
     }
 }
 @media screen and (max-width:511px) {
@@ -148,14 +156,5 @@ p {
         float: left;
         left: 200px;
         top: -75px;
-    }
-    #h-months, #h-years{
-        left: -140px;
-    }
-    #l-days, #l-months, #l-years{
-        left: -100px;
-        top : 0px;
-        margin: 0px;
-        color:  hsl(0, 1%, 44%);
     }
 }
